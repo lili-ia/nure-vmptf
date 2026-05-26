@@ -1,0 +1,41 @@
+{% extends "rates/base.html" %}
+{% block nav_snapshots %}active{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">Збережені результати курсів</h5>
+    </div>
+    <div class="card-body">
+        {% if snapshots %}
+            {% for snapshot in snapshots %}
+            <div class="mb-4">
+                <h6 class="snapshot-date">{{ snapshot.date }} <small class="text-muted fw-normal">(збережено {{ snapshot.created_at|date:"d.m.Y H:i" }})</small></h6>
+                <table class="table table-sm table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Валюта</th>
+                            <th class="text-end">Курс купівлі (грн)</th>
+                            <th class="text-end">Курс продажу (грн)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for rate in snapshot.rates.all %}
+                        <tr>
+                            <td><strong>{{ rate.currency.code }}</strong> — {{ rate.currency.name }}</td>
+                            <td class="text-end">{{ rate.buy_rate }}</td>
+                            <td class="text-end">{{ rate.sell_rate }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endfor %}
+        {% else %}
+        <div class="text-center text-muted py-4">
+            Збережених снапшотів ще немає. Поверніться на <a href="{% url 'index' %}">поточний день</a> та натисніть "Зберегти снапшот дня".
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "rates/base.html" %}
+{% block nav_today %}active{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Курси валют на {{ today }}</h5>
+                {% if rates %}
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" name="save_snapshot" class="btn btn-success btn-sm">
+                        Зберегти результат дня
+                    </button>
+                </form>
+                {% endif %}
+            </div>
+            <div class="card-body p-0">
+                {% if rates %}
+                <table class="table table-hover table-bordered mb-0">
+                    <thead>
+                        <tr>
+                            <th>Валюта</th>
+                            <th class="text-end">Курс купівлі (грн)</th>
+                            <th class="text-end">Курс продажу (грн)</th>
+                            <th class="text-center">Дія</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for rate in rates %}
+                        <tr>
+                            <td><strong>{{ rate.currency.code }}</strong> — {{ rate.currency.name }}</td>
+                            <td class="text-end">{{ rate.buy_rate }}</td>
+                            <td class="text-end">{{ rate.sell_rate }}</td>
+                            <td class="text-center">
+                                <form method="post" action="{% url 'delete_rate' rate.pk %}" class="d-inline">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger btn-sm"
+                                        onclick="return confirm('Видалити курс {{ rate.currency.code }}?')">
+                                        Видалити
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <div class="text-center text-muted py-4">
+                    Курси на сьогодні ще не додано.
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Додати курс</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    {% for field in form %}
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">{{ field.label }}</label>
+                        {{ field }}
+                        {% if field.errors %}
+                        <div class="text-danger small">{{ field.errors }}</div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    <button type="submit" name="add_rate" class="btn btn-primary w-100">
+                        Додати / Оновити курс
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
