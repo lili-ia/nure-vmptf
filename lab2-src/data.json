@@ -1,0 +1,10 @@
+[
+  { "model": "RG550",   "type": "Electric",   "year": 1987, "price_usd": 1099, "rating": 5.0 },
+  { "model": "JEM777",  "type": "Electric",   "year": 1987, "price_usd": 1999, "rating": 4.9 },
+  { "model": "AZ2402",  "type": "Electric",   "year": 2019, "price_usd": 1999, "rating": 4.8 },
+  { "model": "S570",    "type": "Electric",   "year": 1987, "price_usd": 849,  "rating": 4.7 },
+  { "model": "RGD3127", "type": "Electric",   "year": 2010, "price_usd": 1299, "rating": 4.6 },
+  { "model": "SR500",   "type": "Bass",       "year": 1994, "price_usd": 699,  "rating": 4.6 },
+  { "model": "AF55",    "type": "Hollowbody", "year": 2002, "price_usd": 349,  "rating": 3.5 },
+  { "model": "SR300EB", "type": "Bass",       "year": 2010, "price_usd": 349,  "rating": 4.4 }
+]
