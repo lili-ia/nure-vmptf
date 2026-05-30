@@ -1,0 +1,68 @@
+.watch-page { max-width: 860px; }
+
+.player-wrap {
+  background: #000;
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
+.player { width: 100%; height: 100%; display: block; }
+
+.watch-meta {
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 14px;
+}
+
+.watch-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.watch-title-row h1 { font-size: 1.1rem; font-weight: 700; line-height: 1.4; }
+
+.watch-btns { display: flex; gap: 8px; flex-shrink: 0; }
+
+.share-btn, .delete-btn {
+  background: none;
+  border: 1px solid #e0e0e0;
+  color: #888;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  font-family: inherit;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.share-btn:hover { border-color: #111; color: #111; }
+.delete-btn:hover { border-color: #c00; color: #c00; }
+
+.watch-stats {
+  display: flex;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #bbb;
+  flex-wrap: wrap;
+}
+
+.mimetype {
+  font-family: monospace;
+  font-size: 0.72rem;
+}
+
+.watch-desc {
+  margin-top: 14px;
+  font-size: 0.875rem;
+  color: #555;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.back-link { font-size: 0.85rem; color: #bbb; }
+.back-link:hover { color: #111; }
+
+.watch-status { text-align: center; padding: 80px 20px; color: #bbb; font-size: 0.9rem; }
+.watch-status.error { color: #c00; }
+.watch-status p { margin-bottom: 14px; }

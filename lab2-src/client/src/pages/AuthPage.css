@@ -1,0 +1,38 @@
+.auth-wrap {
+  max-width: 360px;
+  margin: 60px auto;
+}
+
+.auth-wrap h1 { font-size: 1.2rem; font-weight: 700; margin-bottom: 24px; }
+
+.auth-form { display: flex; flex-direction: column; gap: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 5px; }
+.field label { font-size: 0.8rem; color: #888; }
+.field input {
+  border: 1px solid #e0e0e0;
+  padding: 9px 12px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.field input:focus { border-color: #111; }
+
+.auth-error { font-size: 0.8rem; color: #c00; }
+
+.auth-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+.auth-btn:hover:not(:disabled) { background: #333; }
+.auth-btn:disabled { opacity: 0.4; cursor: default; }
+
+.auth-switch { margin-top: 16px; font-size: 0.85rem; color: #888; }
+.auth-switch a { color: #111; text-decoration: underline; }

@@ -1,0 +1,80 @@
+.upload-page h1 { font-size: 1.1rem; font-weight: 700; margin-bottom: 28px; }
+
+.upload-form {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.drop-zone {
+  border: 1px dashed #ccc;
+  padding: 40px 24px;
+  text-align: center;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 0.875rem;
+  transition: border-color 0.15s;
+}
+
+.drop-zone:hover, .drop-zone.has-file { border-color: #111; color: #555; }
+
+.upload-icon { color: #ccc; margin-bottom: 10px; }
+.drop-zone p { margin-bottom: 4px; }
+.drop-zone .link { color: #111; text-decoration: underline; }
+.hint { font-size: 0.75rem; color: #ccc; }
+
+.file-info { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.file-icon { color: #111; }
+.file-name { font-size: 0.875rem; color: #111; word-break: break-all; }
+.file-size { font-size: 0.75rem; color: #aaa; }
+
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+.form-group label { font-size: 0.8rem; color: #888; }
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #e0e0e0;
+  color: #111;
+  padding: 9px 12px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus { border-color: #111; }
+
+.form-error { color: #c00; font-size: 0.8rem; }
+
+.progress-wrap {
+  background: #f0f0f0;
+  height: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  background: #111;
+  transition: width 0.2s;
+}
+
+.progress-label { font-size: 0.75rem; color: #888; margin-top: 4px; }
+
+.submit-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  align-self: flex-start;
+  transition: background 0.15s;
+}
+
+.submit-btn:hover:not(:disabled) { background: #333; }
+.submit-btn:disabled { opacity: 0.4; cursor: default; }

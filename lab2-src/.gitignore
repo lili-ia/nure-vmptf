@@ -1,0 +1,9 @@
+node_modules/
+server/.env
+server/uploads/*.mp4
+server/uploads/*.webm
+server/uploads/*.ogg
+server/uploads/*.mov
+server/videos.json
+client/build/
+.DS_Store

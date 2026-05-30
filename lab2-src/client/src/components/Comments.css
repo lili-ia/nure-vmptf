@@ -1,0 +1,138 @@
+.comments {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.comments-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.comments-title span {
+  font-weight: 400;
+  color: #bbb;
+  margin-left: 6px;
+}
+
+/* Form */
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.comment-author {
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 6px 0;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: #111;
+  outline: none;
+  width: 200px;
+}
+
+.comment-author:focus { border-bottom-color: #111; }
+.comment-author::placeholder { color: #ccc; }
+
+.comment-input-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.comment-text {
+  flex: 1;
+  border: 1px solid #e5e5e5;
+  padding: 10px 12px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  color: #111;
+  resize: none;
+  outline: none;
+  transition: border-color 0.15s;
+  line-height: 1.5;
+}
+
+.comment-text:focus { border-color: #111; }
+.comment-text::placeholder { color: #ccc; }
+
+.comment-submit {
+  flex-shrink: 0;
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: inherit;
+  align-self: flex-end;
+  transition: background 0.15s;
+}
+
+.comment-submit:hover:not(:disabled) { background: #333; }
+.comment-submit:disabled { opacity: 0.4; cursor: default; }
+
+.comment-error { font-size: 0.8rem; color: #c00; }
+
+/* List */
+.comments-empty { font-size: 0.875rem; color: #bbb; }
+
+.comment-login-hint {
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.comment-login-hint a { color: #111; text-decoration: underline; }
+
+.comment-list { display: flex; flex-direction: column; }
+
+.comment-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.comment-item:last-child { border-bottom: none; }
+
+.comment-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.comment-author-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.comment-time {
+  font-size: 0.75rem;
+  color: #bbb;
+  flex: 1;
+}
+
+.comment-delete {
+  background: none;
+  border: none;
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 2px;
+  transition: color 0.15s;
+}
+
+.comment-delete:hover { color: #c00; }
+
+.comment-body {
+  font-size: 0.875rem;
+  color: #333;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

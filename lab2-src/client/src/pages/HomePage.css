@@ -1,0 +1,33 @@
+.home-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.home-header h1 { font-size: 1.1rem; font-weight: 700; }
+
+.count { font-size: 0.8rem; color: #bbb; }
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 32px 20px;
+}
+
+.status { text-align: center; padding: 60px; color: #bbb; font-size: 0.9rem; }
+.status.error { color: #c00; }
+
+.empty { text-align: center; padding: 80px 20px; color: #bbb; }
+.empty p { margin-bottom: 16px; font-size: 0.9rem; }
+
+.btn-primary {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btn-primary:hover { background: #333; }

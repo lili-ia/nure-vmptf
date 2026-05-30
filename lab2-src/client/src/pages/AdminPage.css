@@ -1,0 +1,61 @@
+.admin-page h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.admin-page h1 span { font-weight: 400; color: #bbb; margin-left: 6px; }
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.users-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 0.75rem;
+  color: #888;
+  border-bottom: 1px solid #e5e5e5;
+  font-weight: 600;
+}
+
+.users-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.users-table tr.current-user td { background: #fafafa; }
+
+.cell-username { font-weight: 600; }
+.cell-email { color: #888; font-size: 0.82rem; }
+
+.role-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border: 1px solid #e0e0e0;
+  color: #888;
+}
+
+.role-badge.admin { border-color: #111; color: #111; }
+
+.cell-actions { display: flex; gap: 6px; }
+
+.action-btn {
+  background: none;
+  border: 1px solid #e0e0e0;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-family: inherit;
+  color: #555;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.action-btn:hover { border-color: #111; color: #111; }
+.action-btn.danger:hover { border-color: #c00; color: #c00; }
+
+.admin-status { padding: 60px; text-align: center; color: #bbb; font-size: 0.9rem; }
+.admin-status.error { color: #c00; }

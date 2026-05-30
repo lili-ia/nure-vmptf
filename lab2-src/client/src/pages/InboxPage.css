@@ -1,0 +1,67 @@
+.inbox-page h1 { font-size: 1.1rem; font-weight: 700; margin-bottom: 24px; }
+.inbox-page h1 span { font-weight: 400; color: #bbb; margin-left: 6px; }
+
+.inbox-empty { color: #bbb; font-size: 0.875rem; }
+
+.inbox-list { display: flex; flex-direction: column; gap: 1px; }
+
+.inbox-item {
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.inbox-from {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.inbox-from strong { color: #111; }
+
+.inbox-date { margin-left: auto; font-size: 0.75rem; color: #bbb; }
+
+.inbox-video-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.inbox-video-title:hover { text-decoration: underline; }
+
+.inbox-meta { font-size: 0.75rem; color: #bbb; margin-bottom: 6px; }
+
+.inbox-message {
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.inbox-actions { display: flex; gap: 8px; align-items: center; }
+
+.inbox-watch-btn {
+  background: #111;
+  color: #fff;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.inbox-watch-btn:hover { background: #333; }
+
+.inbox-dismiss {
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  color: #bbb;
+  font-family: inherit;
+}
+
+.inbox-dismiss:hover { color: #c00; }
+
+.inbox-status { padding: 60px; text-align: center; color: #bbb; font-size: 0.9rem; }
